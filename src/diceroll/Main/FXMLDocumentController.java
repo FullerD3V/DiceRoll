@@ -28,8 +28,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void imgOnMouseClicked(MouseEvent event){
-        opt = (int)(Math.random() * 7 + 1);
-        System.out.println(opt);
+        opt = (int)(Math.random() * 6 + 1);
         switch(opt){
             case 1:
                 img.setImage(uno);
@@ -53,26 +52,19 @@ public class FXMLDocumentController implements Initializable {
                 System.out.println("Error");
                 break;
         }
-    }
-            
-    @FXML
-    public void imgOnMouseDragged(){
-        //imgOnMouseReleased();
-    }
-            
-    
+    }     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        uno = new Image("../Assets/1.png");    
-        dos = new Image("../Assets/2.png");
-        tres = new Image("../Assets/3.png");
-        cuatro = new Image("../Assets/4.png");
-        cinco = new Image("../Assets/5.png");
-        seis = new Image("./Assets/6.png");
+        opt = 0;
+        uno = new Image("diceroll/Assets/1.png");    
+        dos = new Image("diceroll/Assets/2.png");
+        tres = new Image("diceroll/Assets/3.png");
+        cuatro = new Image("diceroll/Assets/4.png");
+        cinco = new Image("diceroll/Assets/5.png");
+        seis = new Image("diceroll/Assets/6.png");
 
-        
     }    
     
 }
