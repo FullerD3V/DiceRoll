@@ -29,9 +29,7 @@ public class FXMLDocumentController implements Initializable {
     int opt = 0;
     
      Bloom bloom = new Bloom(); 
-     
-     
-    
+
     @FXML
     public void imgOnMouseClicked(MouseEvent event){
         opt = (int)(Math.random() * 6 + 1);
@@ -80,7 +78,7 @@ public class FXMLDocumentController implements Initializable {
         cuatro = new Image("diceroll/Assets/04.png");
         cinco = new Image("diceroll/Assets/05.png");
         seis = new Image("diceroll/Assets/06.png");
-        bloom.setThreshold(0.005);  
+        bloom.setThreshold(0.1);  
 
     }    
     
