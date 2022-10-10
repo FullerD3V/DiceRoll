@@ -12,6 +12,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.effect.Bloom; 
+import javafx.scene.effect.Effect;
 
 /**
  *
@@ -25,6 +27,10 @@ public class FXMLDocumentController implements Initializable {
     Image uno, dos, tres, cuatro, cinco, seis;
     
     int opt = 0;
+    
+     Bloom bloom = new Bloom(); 
+     
+     
     
     @FXML
     public void imgOnMouseClicked(MouseEvent event){
@@ -54,16 +60,27 @@ public class FXMLDocumentController implements Initializable {
         }
     }     
     
+    @FXML
+    public void imgOnMouseEntered(MouseEvent event){
+        img.setEffect(bloom);
+    }
+             
+    @FXML
+    public void imgOnMouseExited(MouseEvent event){
+        img.setEffect(null);
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         opt = 0;
-        uno = new Image("diceroll/Assets/1.png");    
-        dos = new Image("diceroll/Assets/2.png");
-        tres = new Image("diceroll/Assets/3.png");
-        cuatro = new Image("diceroll/Assets/4.png");
-        cinco = new Image("diceroll/Assets/5.png");
-        seis = new Image("diceroll/Assets/6.png");
+        uno = new Image("diceroll/Assets/01.png");    
+        dos = new Image("diceroll/Assets/02.png");
+        tres = new Image("diceroll/Assets/03.png");
+        cuatro = new Image("diceroll/Assets/04.png");
+        cinco = new Image("diceroll/Assets/05.png");
+        seis = new Image("diceroll/Assets/06.png");
+        bloom.setThreshold(0.005);  
 
     }    
     
